@@ -1,4 +1,4 @@
-package rate_limit
+package rate_limiter
 
 import (
 	lru "github.com/hashicorp/golang-lru"

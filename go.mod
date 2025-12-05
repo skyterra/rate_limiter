@@ -1,4 +1,4 @@
-module github.com/skyterra/rate-limit
+module github.com/skyterra/rate-limiter
 
 go 1.24.3
 
