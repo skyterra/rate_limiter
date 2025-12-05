@@ -27,12 +27,12 @@ package main
 import (
     "fmt"
     "time"
-    "github.com/skyterra/rate-limiter"
+	"github.com/skyterra/rate_limiter"
 )
 
 func main() {
     // Create a new rate limiter for "user123"
-    limiter := ratelimiter.NewRateLimiter("user123", 5, 10) // 5 req/sec, burst 10
+    limiter := rate_limiter.NewRateLimiter("user123", 5, 10) // 5 req/sec, burst 10
 
     // Check if an operation is allowed
     if limiter.Allow() {
@@ -42,7 +42,7 @@ func main() {
     }
 
     // Retrieve existing limiter
-    sameLimiter := ratelimiter.GetRateLimiter("user123")
+    sameLimiter := rate_limiter.GetRateLimiter("user123")
     fmt.Println("Limiter exists:", sameLimiter != nil)
 
     // Example: wait for next allowed request
